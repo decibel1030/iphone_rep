@@ -17,6 +17,7 @@ const Hero = () => {
     }
   };
 
+
   useEffect(() => {
     window.addEventListener("resize", handleVideoSrcSet);
     return () => {
@@ -30,8 +31,16 @@ const Hero = () => {
       opacity: 1,
       y: 20,
       ease: "power4.out",
-      delay: 0.5,
+      delay: 1.5,
     });
+    gsap.to("#cta", {
+      duration: 1,
+      opacity: 1,
+      y: -30,
+      ease: "power4.out",
+      delay: 2
+    }
+    )
   });
   return (
     <section className="w-full nav-heigth bg-black relative">
@@ -50,6 +59,10 @@ const Hero = () => {
             <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
+      </div>
+      <div id="cta" className="flex flex-col items-center opacity-0 translate-y-20">
+        <a href="#highlights" className="btn">Buy</a>
+        <p className="font-normal text-xl">From $199/month or $999</p>
       </div>
     </section>
   );
