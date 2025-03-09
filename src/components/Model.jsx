@@ -18,7 +18,7 @@ const Model = () => {
     img: yellowImg,
   })
 
-  // camera control for the model view
+  // camera control for the mdel view
   const cameraControlSmall = useRef();
   const cameraControlLarge = useRef();
 
